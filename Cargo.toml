@@ -1,0 +1,22 @@
+[package]
+name = "sumsub-webhook-cli"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "A CLI tool to simulate Sumsub webhook events locally for testing."
+authors = ["WasifJamal"]
+readme = "README.md"
+repository = "https://github.com/WasifJamal/sumsub-webhook-cli"
+categories = ["command-line-utilities", "development-tools"]
+keywords = ["sumsub", "webhook", "cli", "testing"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+tokio = { version = "1.38", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+anyhow = "1.0"
